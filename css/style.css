@@ -1,0 +1,279 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9bcf9;
+  margin: 0;
+}
+
+/* Header + Navigation */
+header {
+  background: #7e32a6;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+nav a:hover {
+  color: #d8b2e0;
+  border-bottom: 2px solid #d8b2e0;
+  padding-bottom: 3px;
+}
+
+/* Sections */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+h2 {
+  color: #4c285f;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* Lists (skills, hobbies) */
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+ul li {
+  padding: 15px 20px;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease, transform 0.2s;
+}
+ul li:last-child {
+  border-bottom: none;
+}
+ul li:hover {
+  background: #f2e6f5;
+  transform: translateX(5px);
+}
+.icon {
+  font-size: 20px;
+}
+
+/* Image Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+.gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border: 3px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Form styling */
+form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  max-width: 420px;
+  margin: auto;
+  text-align: left;
+  animation: popUp 0.8s ease forwards;
+}
+form label {
+  font-weight: bold;
+  color: #4c285f;
+  display: block;
+  margin-bottom: 6px;
+}
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+form input:focus, form textarea:focus {
+  border-color: #7e32a6;
+  outline: none;
+  box-shadow: 0 0 8px rgba(126,50,166,0.5);
+}
+form button {
+  background: #7e32a6;
+  color: white;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+form button:hover {
+  background: #b607ad;
+  transform: scale(1.07);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Contact Info */
+.contact-info {
+  margin-top: 25px;
+  font-size: 15px;
+}
+.contact-info a {
+  color: #7e32a6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+  color: #b607ad;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  animation: slideUp 1.2s ease forwards;
+}
+th, td {
+  padding: 15px 20px;
+  font-size: 18px;
+}
+th {
+  background: #b607ad;
+  color: white;
+  font-size: 20px;
+}
+tr:nth-child(even) td {
+  background: #f9f1fa;
+}
+tr:hover td {
+  background: #ecd6f4;
+  transition: 0.3s;
+  transform: scale(1.02);
+}
+td span {
+  margin-right: 10px;
+}
+
+/* Profile Card */
+.profile-card {
+  display: inline-block;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  max-width: 400px;
+  animation: fadeUp 1.2s ease forwards;
+}
+.profile-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #7e32a6;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+  animation: fadeInScale 1.2s ease forwards 0.5s;
+}
+.btn {
+  display: inline-block;
+  background: #7e32a6;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  animation: fadeUp 1s ease forwards 1.5s;
+}
+.btn:hover {
+  background: #b607ad;
+  transform: scale(1.05);
+}
+
+/*Float & Clear Layout*/
+.float-layout {
+  max-width: 900px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  padding: 20px;
+}
+.float-box {
+  width: 45%;
+  float: left;
+  margin: 2%;
+  padding: 20px;
+  background: #f2e6f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, background 0.3s;
+}
+.float-box:hover {
+  transform: scale(1.03);
+  background: #e9d3f0;
+}
+/* clearfix */
+.float-layout::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fadeInScale {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@keyframes popUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  table { width: 95%; font-size: 16px; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .float-box { width: 100%; float: none; margin: 10px 0; }
+}
